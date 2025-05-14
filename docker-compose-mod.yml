@@ -8,30 +8,35 @@ services:
     environment:
       # accept the EULA
       EULA: "TRUE" 
-      TYPE: "Vanilla"
 
       #Server properties
-      MEMORY: "20G"
+      MEMORY: "12G"
       ONLINE_MODE: "FALSE"
-      ENABLE_RCON: "true"
+      ENABLE_RCON	: "TRUE"
       RCON_PASSWORD: "12345"
       ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
       ENABLE_COMMAND_BLOCK: "FALSE"
       SERVER_NAME: "Gorila server"
       ENABLE_ROLLING_LOGS: "TRUE"
+      VERSION: "1.20.1"
 
       # World properties
-      VIEW_DISTANCE: "20"
-      SIMULATION_DISTANCE: "20"
+      VIEW_DISTANCE: "12"
+      SIMULATION_DISTANCE: "12"
       OVERRIDE_ICON: "true"
       ICON: "https://st2.depositphotos.com/4027737/9193/i/950/depositphotos_91939828-stock-photo-funny-rhesus-monkey-with-tongue.jpg"
       MOTD: "Macacos de TI"
-      HARDCORE: "TRUE"
       DIFFICULTY: "hard"
+      
+      #Mod properties
+      MODPACK_PLATFORM: AUTO_CURSEFORGE
+      CF_API_KEY: $2a$10$5gd3/vwSPqHWA5/TMPu7CufWd8GuxeG625jXBq78qKaKkEdhPluCK
+      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-9
+      
 
     volumes:
       # attach the relative directory 'data' to the container's /data path
-      - ./survival/data:/data
+      - ./moded/data:/data
     restart: unless-stopped
 
 networks:
