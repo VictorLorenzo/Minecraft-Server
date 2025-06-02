@@ -13,9 +13,12 @@ services:
       #Server properties
       MEMORY: "20G"
       ONLINE_MODE: "FALSE"
-      ENABLE_RCON: "true"
-      RCON_PASSWORD: "12345"
-      ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
+      ENABLE_RCON	: "FALSE"
+      DIFFICULTY: "hard"
+      MOTD: "Minecreaft Hardcore Survival"
+      HARDCORE: "TRUE"
+      ICON: "https://st2.depositphotos.com/4027737/9193/i/950/depositphotos_91939828-stock-photo-funny-rhesus-monkey-with-tongue.jpg"
+      OVERRIDE_ICON: "TRUE"
       ENABLE_COMMAND_BLOCK: "FALSE"
       SERVER_NAME: "Gorila server"
       ENABLE_ROLLING_LOGS: "TRUE"
@@ -23,15 +26,10 @@ services:
       # World properties
       VIEW_DISTANCE: "20"
       SIMULATION_DISTANCE: "20"
-      OVERRIDE_ICON: "true"
-      ICON: "https://st2.depositphotos.com/4027737/9193/i/950/depositphotos_91939828-stock-photo-funny-rhesus-monkey-with-tongue.jpg"
-      MOTD: "Macacos de TI"
-      HARDCORE: "TRUE"
-      DIFFICULTY: "hard"
 
     volumes:
       # attach the relative directory 'data' to the container's /data path
-      - ./survival/data:/data
+      - ./survival_hardcore/data:/data
     restart: unless-stopped
 
 networks:

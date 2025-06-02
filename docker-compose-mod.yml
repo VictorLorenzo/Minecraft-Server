@@ -15,12 +15,13 @@ services:
       ENABLE_RCON	: "TRUE"
       RCON_PASSWORD: "12345"
       ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
-      ENABLE_COMMAND_BLOCK: "FALSE"
+      ENABLE_COMMAND_BLOCK: "TRUE"
       SERVER_NAME: "Gorila server"
       ENABLE_ROLLING_LOGS: "TRUE"
-      VERSION: "1.20.1"
+      VERSION: 1.20.1
 
       # World properties
+      ALLOW_FLIGHT: TRUE
       VIEW_DISTANCE: "12"
       SIMULATION_DISTANCE: "12"
       OVERRIDE_ICON: "true"
@@ -31,12 +32,14 @@ services:
       #Mod properties
       MODPACK_PLATFORM: AUTO_CURSEFORGE
       CF_API_KEY: $2a$10$5gd3/vwSPqHWA5/TMPu7CufWd8GuxeG625jXBq78qKaKkEdhPluCK
-      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-9
+      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/prominence-2-rpg/files/6560035
       
 
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - ./moded/data:/data
+      - ./downloads:/downloads
+      - ./mods:/data/mods/
     restart: unless-stopped
 
 networks:
