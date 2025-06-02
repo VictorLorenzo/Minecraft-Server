@@ -32,5 +32,5 @@ services:
 
 networks:
   default:
-    name: data-plataform
+    name: minecraft_network
     external: true
