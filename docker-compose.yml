@@ -14,7 +14,7 @@ services:
       ONLINE_MODE: "FALSE"
       ENABLE_RCON	: "FALSE"
       DIFFICULTY: "hard"
-      MOTD: "8======D"
+      MOTD: "Minecreaft Hardcore Survival"
       HARDCORE: "TRUE"
       ICON: "https://st2.depositphotos.com/4027737/9193/i/950/depositphotos_91939828-stock-photo-funny-rhesus-monkey-with-tongue.jpg"
       OVERRIDE_ICON: "TRUE"
@@ -27,8 +27,7 @@ services:
       GENERIC_PACK: "/data/modpacks/MODPACK_PROS_BACANAS-1.20.1.zip"
     volumes:
       # attach the relative directory 'data' to the container's /data path
-      - ./data:/data
-      - ./MODPACK_PROS_BACANAS-1.20.1.zip:/data/modpacks/MODPACK_PROS_BACANAS-1.20.1.zip
+      - ./survival_hardcore/data:/data
     restart: unless-stopped
 
 networks:
