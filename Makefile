@@ -19,6 +19,12 @@ pull:
 up:
 	docker compose up -d
 
+up-moded:
+	docker compose -f docker-compose-mod.yml up -d
+
+down-moded:
+	docker compose -f docker-compose-mod.yml down
+
 up-service:
 	docker compose up -d ${SERVICE} 
 
